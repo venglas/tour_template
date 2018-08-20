@@ -7,6 +7,11 @@ body,
 html {
   height: 100%; }
 
+body {
+  font-family: "Lato";
+  font-size: 10px;
+  color: #fff; }
+
 .header {
   background-image: url(../img/city.jpg);
   background-size: cover;
@@ -27,26 +32,44 @@ html {
   .header__logo {
     width: 50px;
     margin: 30px 0 0 40px; }
-  .header .menu__wrapper {
+  .header .menu-wrapper {
     position: absolute;
     right: 40px;
     top: 30px;
     width: 65px;
     height: 65px; }
-    .header .menu__wrapper .menu {
+    .header .menu-wrapper .menu {
       position: relative; }
-      .header .menu__wrapper .menu__icon-side {
+      .header .menu-wrapper .menu__icon-side {
         position: absolute;
         backface-visibility: hidden;
         top: 0;
         left: 0;
         transition: 1s ease; }
-        .header .menu__wrapper .menu__icon-side--back {
+        .header .menu-wrapper .menu__icon-side--back {
           position: absolute;
           top: 0;
           transform: rotateY(180deg); }
-      .header .menu__wrapper .menu:hover .menu__icon-side--front {
+      .header .menu-wrapper .menu:hover .menu__icon-side--front {
         transform: rotateY(180deg);
         opacity: 0; }
-      .header .menu__wrapper .menu:hover .menu__icon-side--back {
+      .header .menu-wrapper .menu:hover .menu__icon-side--back {
         transform: rotateY(0); }
+  .header__content {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .header__content h1 {
+      font-size: 6rem;
+      letter-spacing: 3rem;
+      text-shadow: 0px 0px 13px white, 3px 3px 10px black; }
+    .header__content h2 {
+      font-weight: 300;
+      letter-spacing: 1rem;
+      margin-left: -3rem;
+      font-size: 1rem;
+      text-shadow: 0px 0px 23px; }
