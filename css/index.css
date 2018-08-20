@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body,
+html {
+  height: 100%; }
+
+.header {
+  background-image: url(../img/city.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
+  position: relative; }
+  .header:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom right, green 35%, blue);
+    opacity: .28;
+    z-index: -1; }
+  .header__logo {
+    width: 50px;
+    margin: 30px 0 0 40px; }
+  .header .menu__wrapper {
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    width: 65px;
+    height: 65px; }
+    .header .menu__wrapper .menu {
+      position: relative; }
+      .header .menu__wrapper .menu__icon-side {
+        position: absolute;
+        backface-visibility: hidden;
+        top: 0;
+        left: 0;
+        transition: 1s ease; }
+        .header .menu__wrapper .menu__icon-side--back {
+          position: absolute;
+          top: 0;
+          transform: rotateY(180deg); }
+      .header .menu__wrapper .menu:hover .menu__icon-side--front {
+        transform: rotateY(180deg);
+        opacity: 0; }
+      .header .menu__wrapper .menu:hover .menu__icon-side--back {
+        transform: rotateY(0); }

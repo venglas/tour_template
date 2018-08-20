@@ -1,0 +1,53 @@
+.header {
+    background-image: url(../img/city.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient(to bottom right, green 35%, blue);
+        opacity: .28;
+        z-index: -1;
+    }
+    &__logo {
+        width: 50px;
+        margin: 30px 0 0 40px;
+    }
+    .menu__wrapper {
+        position: absolute;
+        right: 40px;
+        top: 30px;
+        width: 65px;
+        height: 65px;
+        .menu {
+            position: relative;
+            &__icon-side {
+                position: absolute;
+                backface-visibility: hidden;
+                top: 0;
+                left: 0;
+                transition: 1s ease;
+                &--front {}
+                &--back {
+                    position: absolute;
+                    top: 0;
+                    transform: rotateY(180deg);
+                }
+            }
+            &:hover .menu__icon-side--front {
+                transform: rotateY(180deg);
+                opacity: 0;
+            }
+            &:hover .menu__icon-side--back {
+                transform: rotateY(0);
+            }
+        }
+    }
+}
