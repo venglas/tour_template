@@ -1,0 +1,20 @@
+.button {
+    &--read-more {
+        padding: .5rem;
+        font-size: 1.3rem;
+        color: $light_blue;
+        text-decoration: none;
+        border-bottom: 1px solid;
+        &:hover {
+            box-shadow: 9px 7px 29px rgba(0, 0, 0, 0.35);
+            background-color: $light_blue;
+            color: $white;
+            border-bottom: 1px solid $light_blue;
+            transition: all ease-in 150ms;
+        }
+        &:active {
+            box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.35);
+            transition: all ease-in-out 50ms;
+        }
+    }
+}

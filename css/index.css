@@ -15,6 +15,22 @@ body {
 .u-text-center {
   text-align: center; }
 
+.button--read-more {
+  padding: .5rem;
+  font-size: 1.3rem;
+  color: #90b8f6;
+  text-decoration: none;
+  border-bottom: 1px solid; }
+  .button--read-more:hover {
+    box-shadow: 9px 7px 29px rgba(0, 0, 0, 0.35);
+    background-color: #90b8f6;
+    color: #fff;
+    border-bottom: 1px solid #90b8f6;
+    transition: all ease-in 150ms; }
+  .button--read-more:active {
+    box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.35);
+    transition: all ease-in-out 50ms; }
+
 .header {
   background-image: url(../img/city.jpg);
   background-size: cover;
@@ -86,7 +102,8 @@ body {
   text-transform: uppercase;
   font-size: 2.1rem;
   font-weight: 700;
-  color: #5e5e5e; }
+  color: #5e5e5e;
+  margin-bottom: 1rem; }
   .article__header h1 {
     display: inline-block;
     background-image: url(../img/water_pattern.jpg);
@@ -101,3 +118,48 @@ body {
       transform: skewY(-1deg) skewX(3deg);
       transition: all ease-in 150ms;
       cursor: context-menu; }
+
+.article .section-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  clear: both; }
+  .article .section-wrapper .side {
+    width: calc(50% - 3rem);
+    display: inline-block;
+    color: #656565; }
+    .article .section-wrapper .side--left {
+      font-size: 1.2rem; }
+    .article .section-wrapper .side--right {
+      float: right; }
+      .article .section-wrapper .side--right .image-section {
+        position: relative; }
+        .article .section-wrapper .side--right .image-section__image {
+          position: absolute;
+          max-width: 350px;
+          border-radius: 3px;
+          box-shadow: 0 2px 4rem rgba(0, 0, 0, 0.6);
+          margin: .5rem;
+          z-index: 666;
+          transition: all ease-out 400ms; }
+          .article .section-wrapper .side--right .image-section__image--1 {
+            top: 0;
+            left: 0; }
+          .article .section-wrapper .side--right .image-section__image--2 {
+            top: 2rem;
+            right: 3rem; }
+          .article .section-wrapper .side--right .image-section__image--3 {
+            top: 12rem;
+            left: 2rem; }
+          .article .section-wrapper .side--right .image-section__image:hover {
+            box-shadow: 0 2px 2.5rem black;
+            z-index: 999;
+            transform: scale(1.15);
+            transition: all ease-in 200ms; }
+    .article .section-wrapper .side__heading {
+      margin: .8rem 0;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #3f3f3f;
+      text-shadow: 2px 2px 5px #0000008c; }
+    .article .section-wrapper .side .paragraph:not(:last-child) {
+      margin-bottom: 2.2rem; }
