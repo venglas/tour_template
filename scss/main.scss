@@ -2,14 +2,12 @@
 @import "abstract/_variables";
 @import "abstract/_mixins";
 @import "abstract/_functions";
-
 @import "base/_base";
 @import "base/_typography";
 @import "base/_utilities";
 @import "base/_animations";
-
 @import "components/buttons";
 @import "components/inputs";
-
 @import "layout/header";
 @import "layout/footer";
+@import "pages/home";

@@ -12,6 +12,9 @@ body {
   font-size: 10px;
   color: #fff; }
 
+.u-text-center {
+  text-align: center; }
+
 .header {
   background-image: url(../img/city.jpg);
   background-size: cover;
@@ -73,3 +76,28 @@ body {
       margin-left: -3rem;
       font-size: 1rem;
       text-shadow: 0px 0px 23px; }
+
+.article--about {
+  background-color: #eaeaea;
+  padding: 25rem 0;
+  margin-top: -15vh; }
+
+.article__header {
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #5e5e5e; }
+  .article__header h1 {
+    display: inline-block;
+    background-image: url(../img/water_pattern.jpg);
+    background-position: left;
+    background-size: cover;
+    -webkit-background-clip: text;
+    color: transparent;
+    opacity: .95;
+    transition: all ease-out 300ms; }
+    .article__header h1:hover {
+      text-shadow: 3px 2px 13px #0000006b;
+      transform: skewY(-1deg) skewX(3deg);
+      transition: all ease-in 150ms;
+      cursor: context-menu; }
