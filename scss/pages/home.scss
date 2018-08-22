@@ -19,6 +19,11 @@
             justify-content: center;
         }
     }
+    &--tours {
+        height: 100vh;
+        background-color: olivedrab;
+        padding-top: 10rem;
+    }
     &__header {
         text-transform: uppercase;
         font-size: 2.1rem;
