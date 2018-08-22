@@ -14,3 +14,24 @@
 @mixin clear {
     clear: both;
 }
+
+@mixin gradient-layer($first_color, $second_color, $opacity, $type, $first_color_percentage, $z_index) {
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: linear-gradient($type, $first_color $first_color_percentage, $second_color);
+        opacity: $opacity;
+        z-index: $z_index;
+    }
+}
+
+@mixin center-vertical-horizontal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}

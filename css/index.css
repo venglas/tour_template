@@ -12,6 +12,22 @@ body {
   font-size: 10px;
   color: #fff; }
 
+.body--credentials {
+  background-image: url(../img/city.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative; }
+  .body--credentials:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, green 35%, blue);
+    opacity: 0.15;
+    z-index: -1; }
+
 .u-text-center {
   text-align: center; }
 
@@ -31,14 +47,14 @@ body {
     box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.35);
     transition: all ease-in-out 50ms; }
 
-.header {
+.header--home {
   background-image: url(../img/city.jpg);
   background-size: cover;
   background-position: center;
   height: 75vh;
   clip-path: polygon(100% 0, 100% 80%, 0 100%, 0 0);
   position: relative; }
-  .header:after {
+  .header--home:after {
     content: '';
     position: absolute;
     top: 0;
@@ -46,35 +62,35 @@ body {
     bottom: 0;
     right: 0;
     background-image: linear-gradient(to bottom right, green 35%, blue);
-    opacity: .28;
+    opacity: 0.28;
     z-index: -1; }
-  .header__logo {
+  .header--home__logo {
     width: 50px;
     margin: 30px 0 0 40px; }
-  .header .menu-wrapper {
+  .header--home .menu-wrapper {
     position: absolute;
     right: 40px;
     top: 30px;
     width: 65px;
     height: 65px; }
-    .header .menu-wrapper .menu {
+    .header--home .menu-wrapper .menu {
       position: relative; }
-      .header .menu-wrapper .menu__icon-side {
+      .header--home .menu-wrapper .menu__icon-side {
         position: absolute;
         backface-visibility: hidden;
         top: 0;
         left: 0;
         transition: 1s ease; }
-        .header .menu-wrapper .menu__icon-side--back {
+        .header--home .menu-wrapper .menu__icon-side--back {
           position: absolute;
           top: 0;
           transform: rotateY(180deg); }
-      .header .menu-wrapper .menu:hover .menu__icon-side--front {
+      .header--home .menu-wrapper .menu:hover .menu__icon-side--front {
         transform: rotateY(180deg);
         opacity: 0; }
-      .header .menu-wrapper .menu:hover .menu__icon-side--back {
+      .header--home .menu-wrapper .menu:hover .menu__icon-side--back {
         transform: rotateY(0); }
-  .header__content {
+  .header--home__content {
     text-transform: uppercase;
     text-align: center;
     font-size: 2rem;
@@ -82,11 +98,11 @@ body {
     top: 48%;
     left: 50%;
     transform: translate(-50%, -50%); }
-    .header__content h1 {
+    .header--home__content h1 {
       font-size: 6rem;
       letter-spacing: 3rem;
       text-shadow: 0px 0px 13px white, 3px 3px 10px black; }
-    .header__content h2 {
+    .header--home__content h2 {
       font-weight: 300;
       letter-spacing: 1rem;
       margin-left: -3rem;
@@ -166,3 +182,59 @@ body {
       text-shadow: 2px 2px 5px #0000008c; }
     .article .section-wrapper .side .paragraph:not(:last-child) {
       margin-bottom: 2.2rem; }
+
+.main--credentials {
+  font-size: 1rem;
+  padding: 2rem 0;
+  width: 80%;
+  margin: 0 auto; }
+  .main--credentials .photos,
+  .main--credentials .icons {
+    margin: 1rem 0; }
+  .main--credentials .icons__single-icon {
+    padding: .3rem 0; }
+  .main--credentials .icons a {
+    color: #90b8f6;
+    font-weight: 700; }
+  .main--credentials .photos .single-photo {
+    margin: .3rem;
+    display: inline-block;
+    position: relative; }
+    .main--credentials .photos .single-photo:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-image: linear-gradient(to bottom, #000 50%, #1f1f1f);
+      opacity: 0;
+      z-index: 3; }
+    .main--credentials .photos .single-photo:after {
+      transition: all ease-out 500ms; }
+    .main--credentials .photos .single-photo:hover:after {
+      opacity: .55;
+      transition: all ease-in 250ms; }
+    .main--credentials .photos .single-photo:hover .single-photo__link {
+      opacity: 1;
+      transition: all ease 400ms; }
+    .main--credentials .photos .single-photo img {
+      max-width: 250px;
+      z-index: -2;
+      border-radius: 3px;
+      box-shadow: 2px 2px 35px #030303; }
+    .main--credentials .photos .single-photo__link {
+      opacity: 0;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      font-size: 1.7rem;
+      z-index: 4;
+      transition: all ease-out 400ms;
+      backface-visibility: hidden; }
+      .main--credentials .photos .single-photo__link a {
+        color: #fff; }
+  .main--credentials .heading--credentials {
+    padding: .2rem 0; }

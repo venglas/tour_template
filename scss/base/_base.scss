@@ -14,3 +14,11 @@ body {
     font-size: 10px;
     color: $white;
 }
+
+.body--credentials {
+    background-image: url(../img/city.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    @include gradient-layer(green, blue, .15, to bottom, 35%, -1);
+}
