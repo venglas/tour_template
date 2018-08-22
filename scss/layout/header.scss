@@ -40,27 +40,28 @@
             }
         }
     }
-    &__content {
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 2rem;
-        position: absolute;
-        top: 48%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        h1 {
-            font-size: 6rem;
-            letter-spacing: 3rem;
-            @include text-shadow-double(white, black);
-        }
-        h2 {
-            font-weight: 300;
-            letter-spacing: 1rem;
-            margin-left: -3rem;
-            font-size: 1rem;
-            text-shadow: 0px 0px 23px;
-        }
+}
+
+.header__content {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+        font-size: 6rem;
+        letter-spacing: 3rem;
+        @include text-shadow-double(white, black);
+    }
+    h2 {
+        font-weight: 300;
+        letter-spacing: 1rem;
+        margin-left: -3rem;
+        font-size: 1rem;
+        text-shadow: 0px 0px 23px;
     }
 }
 
-.header--credentials {}
+// .header--credentials {}

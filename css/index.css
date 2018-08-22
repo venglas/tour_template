@@ -47,6 +47,52 @@ body {
     box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.35);
     transition: all ease-in-out 50ms; }
 
+.photos-gallery__heading {
+  padding: .2rem 0; }
+
+.photos-gallery .single-photo {
+  margin: .3rem;
+  display: inline-block;
+  position: relative; }
+  .photos-gallery .single-photo:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-image: linear-gradient(to bottom, #000 50%, #1f1f1f);
+    opacity: 0;
+    z-index: 3; }
+  .photos-gallery .single-photo:after {
+    border: 5px solid;
+    border-width: 5px 0;
+    transition: all ease-out 500ms; }
+  .photos-gallery .single-photo:hover:after {
+    opacity: .55;
+    transition: all ease-in 250ms; }
+  .photos-gallery .single-photo:hover .single-photo__link {
+    opacity: 1;
+    transition: all ease 400ms; }
+  .photos-gallery .single-photo img {
+    max-width: 250px;
+    z-index: -2;
+    border-radius: 3px;
+    box-shadow: 2px 2px 35px #030303; }
+  .photos-gallery .single-photo__link {
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: 1.7rem;
+    z-index: 4;
+    transition: all ease-out 400ms;
+    backface-visibility: hidden; }
+    .photos-gallery .single-photo__link a {
+      color: #fff; }
+
 .header--home {
   background-image: url(../img/city.jpg);
   background-size: cover;
@@ -90,24 +136,25 @@ body {
         opacity: 0; }
       .header--home .menu-wrapper .menu:hover .menu__icon-side--back {
         transform: rotateY(0); }
-  .header--home__content {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2rem;
-    position: absolute;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .header--home__content h1 {
-      font-size: 6rem;
-      letter-spacing: 3rem;
-      text-shadow: 0px 0px 13px white, 3px 3px 10px black; }
-    .header--home__content h2 {
-      font-weight: 300;
-      letter-spacing: 1rem;
-      margin-left: -3rem;
-      font-size: 1rem;
-      text-shadow: 0px 0px 23px; }
+
+.header__content {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 2rem;
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .header__content h1 {
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    text-shadow: 0px 0px 13px white, 3px 3px 10px black; }
+  .header__content h2 {
+    font-weight: 300;
+    letter-spacing: 1rem;
+    margin-left: -3rem;
+    font-size: 1rem;
+    text-shadow: 0px 0px 23px; }
 
 .article--about {
   background-color: #eaeaea;
@@ -196,47 +243,3 @@ body {
   .main--credentials .icons a {
     color: #90b8f6;
     font-weight: 700; }
-  .main--credentials .photos .single-photo {
-    margin: .3rem;
-    display: inline-block;
-    position: relative; }
-    .main--credentials .photos .single-photo:after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      background-image: linear-gradient(to bottom, #000 50%, #1f1f1f);
-      opacity: 0;
-      z-index: 3; }
-    .main--credentials .photos .single-photo:after {
-      border: 5px solid;
-      border-width: 5px 0;
-      transition: all ease-out 500ms; }
-    .main--credentials .photos .single-photo:hover:after {
-      opacity: .55;
-      transition: all ease-in 250ms; }
-    .main--credentials .photos .single-photo:hover .single-photo__link {
-      opacity: 1;
-      transition: all ease 400ms; }
-    .main--credentials .photos .single-photo img {
-      max-width: 250px;
-      z-index: -2;
-      border-radius: 3px;
-      box-shadow: 2px 2px 35px #030303; }
-    .main--credentials .photos .single-photo__link {
-      opacity: 0;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      text-align: center;
-      font-size: 1.7rem;
-      z-index: 4;
-      transition: all ease-out 400ms;
-      backface-visibility: hidden; }
-      .main--credentials .photos .single-photo__link a {
-        color: #fff; }
-  .main--credentials .heading--credentials {
-    padding: .2rem 0; }
