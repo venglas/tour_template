@@ -1,0 +1,40 @@
+.box {
+    background-color: rgba($white, .9);
+    position: relative;
+    z-index: 2;
+    width: calc((100%/4) - 13rem);
+    text-align: center;
+    padding: 3rem 1rem 2rem 1rem;
+    border-radius: 3px;
+    color: $dark_gray;
+    box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.809);
+    &__img {
+        margin-bottom: 1.5rem;
+        width: 64px;
+        height: 64px;
+        position: relative;
+        background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.618), rgba(0, 0, 255, 0.631)), url(../img/planet-earth.png);
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(to bottom right, black, red);
+            opacity: 1;
+        }
+    }
+    &__heading {
+        margin: 1.1rem 0;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        color: darken($dark_gray, 10%);
+    }
+    &__paragraph {
+        margin: 1rem 0;
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 180%;
+    }
+}

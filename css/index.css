@@ -93,6 +93,42 @@ body {
     .photos-gallery .single-photo__link a {
       color: #fff; }
 
+.box {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: relative;
+  z-index: 2;
+  width: calc((100%/4) - 13rem);
+  text-align: center;
+  padding: 3rem 1rem 2rem 1rem;
+  border-radius: 3px;
+  color: #656565;
+  box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.809); }
+  .box__img {
+    margin-bottom: 1.5rem;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.618), rgba(0, 0, 255, 0.631)), url(../img/planet-earth.png); }
+    .box__img:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: linear-gradient(to bottom right, black, red);
+      opacity: 1; }
+  .box__heading {
+    margin: 1.1rem 0;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: #4c4c4c; }
+  .box__paragraph {
+    margin: 1rem 0;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 180%; }
+
 .header--home {
   background-image: url(../img/city.jpg);
   background-size: cover;
@@ -158,8 +194,14 @@ body {
 
 .article--about {
   background-color: #eaeaea;
-  padding: 25rem 0;
+  padding-top: 20rem;
+  height: 100vh;
   margin-top: -15vh; }
+
+.article--features {
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgba(74, 67, 221, 0.5), rgba(177, 45, 177, 0.5)), url(../img/mountains.jpg);
+  height: 100vh; }
 
 .article__header {
   text-transform: uppercase;
