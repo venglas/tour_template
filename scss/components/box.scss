@@ -8,22 +8,19 @@
     border-radius: 3px;
     color: $dark_gray;
     box-shadow: 2px 2px 40px rgba(0, 0, 0, 0.809);
-    &__img {
+    margin: 0 2.2rem;
+    display: inline-block;
+    transition: all ease-out 500ms;
+    &__icon {
         margin-bottom: 1.5rem;
-        width: 64px;
-        height: 64px;
-        position: relative;
-        background-image: linear-gradient(to bottom right, rgba(0, 128, 0, 0.618), rgba(0, 0, 255, 0.631)), url(../img/planet-earth.png);
-        &:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: linear-gradient(to bottom right, black, red);
-            opacity: 1;
-        }
+        font-size: 5rem;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to bottom right, #8bc34a8c 25%, #2196f370), url(../img/water_pattern.jpg);
+        background-position: center;
+        background-size: cover; // border-radius: 50%;
+        // box-shadow: 7px 6px 30px #00000054;
+        opacity: 0.75;
     }
     &__heading {
         margin: 1.1rem 0;
@@ -36,5 +33,9 @@
         font-size: 1rem;
         font-weight: 700;
         line-height: 180%;
+    }
+    &:hover {
+        transform: translateY(-.5rem) scale(1.05);
+        transition: all ease-in 200ms;
     }
 }
