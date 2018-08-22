@@ -211,9 +211,9 @@ body {
       opacity: 0;
       z-index: 3; }
     .main--credentials .photos .single-photo:after {
-      transition: all ease-out 500ms;
       border: 5px solid;
-      border-width: 5px 0; }
+      border-width: 5px 0;
+      transition: all ease-out 500ms; }
     .main--credentials .photos .single-photo:hover:after {
       opacity: .55;
       transition: all ease-in 250ms; }
