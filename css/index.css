@@ -140,6 +140,7 @@ body {
           box-shadow: 0 2px 4rem rgba(0, 0, 0, 0.6);
           margin: .5rem;
           z-index: 666;
+          opacity: .95;
           transition: all ease-out 400ms; }
           .article .section-wrapper .side--right .image-section__image--1 {
             top: 0;
@@ -148,13 +149,15 @@ body {
             top: 2rem;
             right: 3rem; }
           .article .section-wrapper .side--right .image-section__image--3 {
+            position: relative !important;
             top: 12rem;
             left: 2rem; }
           .article .section-wrapper .side--right .image-section__image:hover {
             box-shadow: 0 2px 2.5rem black;
             z-index: 999;
             transform: scale(1.15);
-            transition: all ease-in 200ms; }
+            transition: all ease-in 200ms;
+            opacity: 1; }
     .article .section-wrapper .side__heading {
       margin: .8rem 0;
       text-transform: uppercase;
