@@ -36,7 +36,8 @@ body {
   font-size: 1.3rem;
   color: #90b8f6;
   text-decoration: none;
-  border-bottom: 1px solid; }
+  border-bottom: 1px solid;
+  cursor: pointer; }
   .button--read-more:hover {
     box-shadow: 9px 7px 29px rgba(0, 0, 0, 0.35);
     background-color: #90b8f6;
@@ -47,7 +48,7 @@ body {
     box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.35);
     transition: all ease-in-out 50ms; }
 
-.button {
+.button-default {
   padding: 1.15rem 0;
   font-size: 1.3rem;
   border: 0;
@@ -56,12 +57,13 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   transition: all ease-out 500ms;
-  outline: none; }
-  .button:hover {
+  outline: none;
+  cursor: pointer; }
+  .button-default:hover {
     transform: translateY(-3px);
     box-shadow: 6px 6px 35px #0000006b;
     transition: all ease-in 250ms; }
-  .button:active {
+  .button-default:active {
     box-shadow: 2px 2px 25px #000000c1;
     transform: translateY(-1px);
     transition: all ease-in 75ms; }
@@ -69,7 +71,8 @@ body {
 .card__button {
   width: 75%;
   background-color: #fff;
-  color: #777; }
+  color: #777;
+  cursor: pointer; }
   .card__button:hover {
     color: #4c4c4c; }
 
