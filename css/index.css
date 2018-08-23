@@ -212,6 +212,14 @@ body {
       text-shadow: 0px 0px 13px rgba(230, 93, 201, 0.35), 3px 3px 10px #959595; }
       .card__side .card__details--1 li:not(:last-child) {
         border-bottom: 1px solid rgba(230, 93, 201, 0.5); }
+    .card__side .card__details--2 {
+      text-shadow: 0px 0px 13px rgba(21, 183, 92, 0.35), 3px 3px 10px #959595; }
+      .card__side .card__details--2 li:not(:last-child) {
+        border-bottom: 1px solid rgba(49, 231, 129, 0.5); }
+    .card__side .card__details--3 {
+      text-shadow: 0px 0px 13px rgba(33, 143, 214, 0.35), 3px 3px 10px #959595; }
+      .card__side .card__details--3 li:not(:last-child) {
+        border-bottom: 1px solid rgba(93, 176, 230, 0.5); }
     .card__side .card__details ul {
       list-style: none;
       width: 80%;

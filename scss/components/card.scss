@@ -77,6 +77,22 @@
                     }
                 }
             }
+            &--2 {
+                @include text-shadow-double(rgba(#15b75c, 0.35), #959595);
+                li {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgba($light_green, .5);
+                    }
+                }
+            }
+            &--3 {
+                @include text-shadow-double(rgba(#218fd6, 0.35), #959595);
+                li {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgba($light_blue_2, .5);
+                    }
+                }
+            }
             ul {
                 list-style: none;
                 width: 80%;
