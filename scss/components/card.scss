@@ -1,13 +1,14 @@
 .card {
     position: relative;
     display: inline-block;
-    height: 25rem;
-    width: calc( (100%/3) - 16rem);
+    height: 60%;
+    width: calc( (100%/3) - 15%);
     -webkit-perspective: 150rem;
     transition: all ease-out 700ms;
+    margin: 0 3rem;
     &:hover {
         .card__side--front {
-            transform: rotateY(180deg);
+            transform: rotateY(-180deg);
         }
         .card__side--back {
             transform: rotateY(0);
@@ -18,14 +19,104 @@
         width: 100%;
         height: 100%;
         backface-visibility: hidden;
+        border-radius: 3px;
+        box-shadow: 2px 2px 35px #000;
         transition: all ease-in 500ms;
+        overflow: hidden;
+        .card__img {
+            height: 40%;
+            width: 100%;
+            background-blend-mode: color-burn;
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            &--1 {
+                background-image: linear-gradient(to right bottom, rgba(#d621af, .3), rgba(#eb125d, .3)), url(../img/lake.jpg);
+            }
+            &--2 {
+                background-image: linear-gradient(to right bottom, rgba(#15b75c, .3), rgba(#12ebc5, .3)), url(../img/mountains_2.jpg);
+            }
+            &--3 {
+                background-image: linear-gradient(to right bottom, rgba(#218fd6, .3), rgba(#12a9eb, .3)), url(../img/island.jpg);
+                background-blend-mode: exclusion;
+            }
+        }
+        .card__heading {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            position: absolute;
+            top: 26%;
+            right: 0;
+            text-align: center;
+            width: 50%;
+            padding-right: .8rem;
+            &--2 {
+                width: 70%;
+            }
+        }
+        .card__heading-span {
+            padding: 0.2rem 1.2rem;
+            box-decoration-break: clone;
+            -webkit-box-direction-break: clone;
+            &--1 {
+                background-image: linear-gradient(to right bottom, rgba(#d621af, .60), rgba(#eb125d, .65));
+            }
+            &--2 {
+                background-image: linear-gradient(to right bottom, rgba(#15b75c, .60), rgba(#12ebc5, .65));
+            }
+            &--3 {
+                background-image: linear-gradient(to right bottom, rgba(#218fd6, .60), rgba(#12a9eb, .65));
+            }
+        }
+        .card__details {
+            &--1 {
+                @include text-shadow-double(rgba(230, 93, 201, 0.35), #959595);
+                li {
+                    &:not(:last-child) {
+                        border-bottom: 1px solid rgba($light_violet, .5);
+                    }
+                }
+            }
+            ul {
+                list-style: none;
+                width: 80%;
+                margin: 0 auto;
+                color: $dark_gray;
+                li {
+                    text-align: center;
+                    font-size: 1rem;
+                    padding: .8rem;
+                }
+            }
+        }
+        .price-only {
+            font-size: 1.8rem;
+        }
+        .price-value {
+            font-size: 3rem
+        }
         &--front {
             z-index: 1;
         }
         &--back {
-            @include card-gradient(to bottom right, rgb(255, 174, 0), rgb(201, 145, 23));
             z-index: 0;
             transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            &>* {
+                margin: .5rem 0;
+            }
+        }
+        &--back-1 {
+            background-image: linear-gradient(to right bottom, #d621af, #e10a9a, #e80085, #eb0071, #eb125d);
+        }
+        &--back-2 {
+            background-image: linear-gradient(to right bottom, #15b75c, #00c477, #00d192, #00deac, #12ebc5);
+        }
+        &--back-3 {
+            background-image: linear-gradient(to right bottom, #218fd6, #1d95db, #199ce1, #15a2e6, #12a9eb);
         }
     }
 }

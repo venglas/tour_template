@@ -3,5 +3,7 @@ $default_font: 'Lato';
 //colors:
 $white: #fff;
 $gray: #777;
+$light_gray: lighten($gray, 45%);
 $dark_gray: #656565;
 $light_blue: rgb(144, 184, 246);
+$light_violet: lighten(#d621af, 15%);
