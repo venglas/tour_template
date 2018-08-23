@@ -25,6 +25,13 @@
         height: 100vh;
         background-color: $light_gray;
         padding-top: 10rem;
+        .card_wrapper {
+            height: 60%;
+            width: 100%;
+            margin: 3.5rem 0;
+            display: flex;
+            justify-content: center;
+        }
     }
     &__header {
         text-transform: uppercase;

@@ -19,21 +19,17 @@
     }
 }
 
-.card__button {
-    width: 75%;
+.button {
     padding: 1.15rem 0;
     font-size: 1.3rem;
-    background-color: $white;
     border: 0;
     border-radius: 25px;
     box-shadow: 4px 4px 30px #0000008f;
     text-transform: uppercase;
     font-weight: 700;
-    color: $gray;
     transition: all ease-out 500ms;
     outline: none;
     &:hover {
-        color: darken($dark_gray, 10%);
         transform: translateY(-3px);
         box-shadow: 6px 6px 35px #0000006b;
         transition: all ease-in 250ms;
@@ -42,5 +38,25 @@
         box-shadow: 2px 2px 25px #000000c1;
         transform: translateY(-1px);
         transition: all ease-in 75ms;
+    }
+}
+
+.card__button {
+    width: 75%;
+    background-color: $white;
+    color: $gray;
+    &:hover {
+        color: darken($dark_gray, 10%);
+    }
+}
+
+.tours__button {
+    padding: 1.15rem;
+    font-size: 1.3rem;
+    @include center-box(fit-content);
+    display: block;
+    @include link-restart($gray);
+    &:hover {
+        color: darken($dark_gray, 10%);
     }
 }

@@ -47,28 +47,42 @@ body {
     box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.35);
     transition: all ease-in-out 50ms; }
 
-.card__button {
-  width: 75%;
+.button {
   padding: 1.15rem 0;
   font-size: 1.3rem;
-  background-color: #fff;
   border: 0;
   border-radius: 25px;
   box-shadow: 4px 4px 30px #0000008f;
   text-transform: uppercase;
   font-weight: 700;
-  color: #777;
   transition: all ease-out 500ms;
   outline: none; }
-  .card__button:hover {
-    color: #4c4c4c;
+  .button:hover {
     transform: translateY(-3px);
     box-shadow: 6px 6px 35px #0000006b;
     transition: all ease-in 250ms; }
-  .card__button:active {
+  .button:active {
     box-shadow: 2px 2px 25px #000000c1;
     transform: translateY(-1px);
     transition: all ease-in 75ms; }
+
+.card__button {
+  width: 75%;
+  background-color: #fff;
+  color: #777; }
+  .card__button:hover {
+    color: #4c4c4c; }
+
+.tours__button {
+  padding: 1.15rem;
+  font-size: 1.3rem;
+  width: fit-content;
+  margin: 0 auto;
+  display: block;
+  text-decoration: none;
+  color: #777; }
+  .tours__button:hover {
+    color: #4c4c4c; }
 
 .photos-gallery__heading {
   padding: .2rem 0; }
@@ -155,7 +169,7 @@ body {
 .card {
   position: relative;
   display: inline-block;
-  height: 60%;
+  height: 100%;
   width: calc( (100%/3) - 15%);
   -webkit-perspective: 150rem;
   transition: all ease-out 700ms;
@@ -179,7 +193,9 @@ body {
       background-blend-mode: color-burn;
       background-size: cover;
       background-position: center;
-      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%); }
+      clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px; }
       .card__side .card__img--1 {
         background-image: linear-gradient(to right bottom, rgba(214, 33, 175, 0.3), rgba(235, 18, 93, 0.3)), url(../img/lake.jpg); }
       .card__side .card__img--2 {
@@ -339,6 +355,12 @@ body {
   height: 100vh;
   background-color: #eaeaea;
   padding-top: 10rem; }
+  .article--tours .card_wrapper {
+    height: 60%;
+    width: 100%;
+    margin: 3.5rem 0;
+    display: flex;
+    justify-content: center; }
 
 .article__header {
   text-transform: uppercase;

@@ -29,15 +29,19 @@
     }
 }
 
-@mixin card-gradient($type, $first_color, $second_color) {
-    background: linear-gradient(to bottom, rgba(255, 116, 0, 1) 0%, rgba(255, 116, 0, 1) 100%);
-    background-size: cover;
-    background-position: center;
-}
-
+// @mixin card-gradient($type, $first_color, $second_color) {
+//     background: linear-gradient(to bottom, rgba(255, 116, 0, 1) 0%, rgba(255, 116, 0, 1) 100%);
+//     background-size: cover;
+//     background-position: center;
+// }
 @mixin center-vertical-horizontal {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, 50%);
+}
+
+@mixin link-restart($color) {
+    text-decoration: none;
+    color: $color;
 }

@@ -1,7 +1,7 @@
 .card {
     position: relative;
     display: inline-block;
-    height: 60%;
+    height: 100%;
     width: calc( (100%/3) - 15%);
     -webkit-perspective: 150rem;
     transition: all ease-out 700ms;
@@ -30,6 +30,8 @@
             background-size: cover;
             background-position: center;
             clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            border-top-left-radius: 3px;
+            border-top-right-radius: 3px;
             &--1 {
                 background-image: linear-gradient(to right bottom, rgba(#d621af, .3), rgba(#eb125d, .3)), url(../img/lake.jpg);
             }
