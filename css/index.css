@@ -354,7 +354,8 @@ body {
 .article--tours {
   height: 100vh;
   background-color: #eaeaea;
-  padding-top: 10rem; }
+  padding-top: 10rem;
+  margin-top: -5rem; }
   .article--tours .card_wrapper {
     height: 60%;
     width: 100%;
