@@ -1,0 +1,35 @@
+.story-single {
+    @include center-box(45%);
+    @include background-color-opacity($white, .6);
+    border-radius: 3px;
+    transform: skew(-15deg);
+    .wrapper {
+        padding: 2rem 3rem 3.5rem 2rem;
+        transform: skew(15deg);
+    }
+    .circle-box {
+        float: left;
+        shape-outside: circle(41% at 30% 55%);
+        -webkit-shape-outside: circle(41% at 30% 55%);
+        clip-path: circle(34% at 30% 50%);
+        &__img {
+            width: 15rem;
+            height: auto;
+        }
+    }
+    .text-box {
+        &__heading {
+            color: $dark_gray;
+            padding: 1rem;
+            font-size: 1.3rem;
+            backface-visibility: hidden;
+        }
+        &__paragraph {
+            letter-spacing: 1px;
+            line-height: 180%;
+            font-size: .9rem;
+            color: $gray;
+            padding-left: 1rem;
+        }
+    }
+}

@@ -270,6 +270,35 @@ body {
     .card__side--back-3 {
       background-image: linear-gradient(to right bottom, #218fd6, #1d95db, #199ce1, #15a2e6, #12a9eb); }
 
+.story-single {
+  width: 45%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 3px;
+  transform: skew(-15deg); }
+  .story-single .wrapper {
+    padding: 2rem 3rem 3.5rem 2rem;
+    transform: skew(15deg); }
+  .story-single .circle-box {
+    float: left;
+    shape-outside: circle(41% at 30% 55%);
+    -webkit-shape-outside: circle(41% at 30% 55%);
+    clip-path: circle(34% at 30% 50%); }
+    .story-single .circle-box__img {
+      width: 15rem;
+      height: auto; }
+  .story-single .text-box__heading {
+    color: #656565;
+    padding: 1rem;
+    font-size: 1.3rem;
+    backface-visibility: hidden; }
+  .story-single .text-box__paragraph {
+    letter-spacing: 1px;
+    line-height: 180%;
+    font-size: .9rem;
+    color: #777;
+    padding-left: 1rem; }
+
 .header--home {
   background-image: url(../img/city.jpg);
   background-size: cover;
