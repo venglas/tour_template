@@ -11,6 +11,11 @@
     margin: 0 auto;
 }
 
+@mixin center-box-margin($box_width, $box_margin) {
+    width: $box_width;
+    margin: $box_margin auto;
+}
+
 @mixin clear {
     clear: both;
 }

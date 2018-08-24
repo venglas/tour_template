@@ -275,7 +275,7 @@ body {
 
 .story-single {
   width: 45%;
-  margin: 0 auto;
+  margin: 3.5rem auto;
   background-color: rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   transform: skew(-15deg);
@@ -283,24 +283,60 @@ body {
   .story-single > * {
     transform: skew(15deg); }
   .story-single .circle-box {
+    width: 150px;
+    height: 150px;
+    margin-right: 49px;
     float: left;
     shape-outside: circle(41% at 30% 55%);
-    -webkit-shape-outside: circle(41% at 30% 55%);
-    clip-path: circle(34% at 30% 50%); }
+    -webkit-shape-outside: circle(28% at 66% 50%);
+    clip-path: circle(50% at 50% 50%);
+    position: relative;
+    z-index: 20; }
     .story-single .circle-box__img {
-      width: 15rem;
-      height: auto; }
-  .story-single .text-box__heading {
-    color: #656565;
-    padding: 1rem;
-    font-size: 1.3rem;
-    backface-visibility: hidden; }
-  .story-single .text-box__paragraph {
-    letter-spacing: 1px;
-    line-height: 180%;
-    font-size: .9rem;
-    color: #777;
-    padding-left: 1rem; }
+      width: 100%;
+      height: 100%;
+      transition: all ease-in-out 200ms; }
+      .story-single .circle-box__img:hover + .circle-box__name {
+        top: 0; }
+    .story-single .circle-box:hover .hide-text {
+      opacity: 1; }
+    .story-single .circle-box:hover .circle-box__img {
+      filter: blur(5px);
+      transition: all ease-in-out 200ms; }
+    .story-single .circle-box__name {
+      z-index: 666;
+      width: 100%;
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 100%;
+      color: #fff;
+      font-size: 2rem;
+      padding: 21% 1rem;
+      text-align: center;
+      clip-path: circle(50% at 50% 50%);
+      transition: all ease-in 250ms;
+      background-color: rgba(0, 0, 0, 0.4); }
+      .story-single .circle-box__name:hover {
+        top: 0; }
+        .story-single .circle-box__name:hover .hide-text {
+          opacity: 1; }
+      .story-single .circle-box__name .hide-text {
+        opacity: 0;
+        transition: all ease-in 450ms; }
+  .story-single .text-box {
+    z-index: 10; }
+    .story-single .text-box__heading {
+      color: #656565;
+      padding: 1rem;
+      font-size: 1.3rem;
+      backface-visibility: hidden; }
+    .story-single .text-box__paragraph {
+      letter-spacing: 1px;
+      line-height: 180%;
+      font-size: .9rem;
+      color: #777;
+      padding-left: 1rem; }
 
 .header--home {
   background-image: url(../img/city.jpg);

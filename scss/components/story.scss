@@ -1,5 +1,5 @@
 .story-single {
-    @include center-box(45%);
+    @include center-box-margin(45%, 3.5rem);
     @include background-color-opacity($white, .6);
     border-radius: 3px;
     transform: skew(-15deg);
@@ -7,20 +7,61 @@
     &>* {
         transform: skew(15deg);
     }
-    .wrapper {
-        // padding: 2rem 3rem 3.5rem 2rem;
-    }
     .circle-box {
+        width: 150px;
+        height: 150px;
+        margin-right: 49px;
         float: left;
         shape-outside: circle(41% at 30% 55%);
-        -webkit-shape-outside: circle(41% at 30% 55%);
-        clip-path: circle(34% at 30% 50%);
+        -webkit-shape-outside: circle(28% at 66% 50%);
+        clip-path: circle(50% at 50% 50%);
+        position: relative;
+        z-index: 20;
         &__img {
-            width: 15rem;
-            height: auto;
+            width: 100%;
+            height: 100%;
+            transition: all ease-in-out 200ms;
+            &:hover+.circle-box__name {
+                top: 0;
+            }
+        }
+        &:hover {
+            .hide-text {
+                opacity: 1;
+            }
+            .circle-box__img {
+                filter: blur(5px);
+                transition: all ease-in-out 200ms;
+            }
+        }
+        &__name {
+            z-index: 666;
+            width: 100%;
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 100%;
+            color: $white;
+            font-size: 2rem;
+            padding: 21% 1rem;
+            text-align: center;
+            clip-path: circle(50% at 50% 50%);
+            transition: all ease-in 250ms;
+            @include background-color-opacity(#000, .4);
+            &:hover {
+                top: 0;
+                .hide-text {
+                    opacity: 1
+                }
+            }
+            .hide-text {
+                opacity: 0;
+                transition: all ease-in 450ms;
+            }
         }
     }
     .text-box {
+        z-index: 10;
         &__heading {
             color: $dark_gray;
             padding: 1rem;
