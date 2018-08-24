@@ -16,9 +16,17 @@ body {
 }
 
 .body--credentials {
-    background-image: url(../img/city.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    @include gradient-layer(green, blue, .15, to bottom, 35%, -1);
+    // @include gradient-layer(green, blue, .15, to bottom, 35%, -1);
+    &:after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: linear-gradient(to bottom right, rgba(green, .15) 35%, rgba( blue, .15)), url(../img/city.jpg);
+        background-size: cover;
+        background-position: center;
+        z-index: -1;
+    }
 }
