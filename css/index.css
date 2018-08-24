@@ -301,8 +301,9 @@ body {
     .story-single .circle-box:hover .hide-text {
       opacity: 1; }
     .story-single .circle-box:hover .circle-box__img {
-      filter: blur(5px);
-      transition: all ease-in-out 200ms; }
+      filter: blur(2px);
+      transform: scale(1.2);
+      transition: all ease-in-out 280ms; }
     .story-single .circle-box__name {
       z-index: 666;
       width: 100%;
@@ -316,7 +317,7 @@ body {
       text-align: center;
       clip-path: circle(50% at 50% 50%);
       transition: all ease-in 250ms;
-      background-color: rgba(0, 0, 0, 0.4); }
+      background-color: rgba(0, 0, 0, 0.32); }
       .story-single .circle-box__name:hover {
         top: 0; }
         .story-single .circle-box__name:hover .hide-text {
