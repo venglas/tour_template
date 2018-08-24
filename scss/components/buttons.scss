@@ -21,6 +21,8 @@
     }
     &--see-all-stories {
         display: block;
+        position: relative;
+        color: darken($light_blue, 8%);
         @include center-box(fit-content)
     }
 }
