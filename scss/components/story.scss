@@ -1,6 +1,6 @@
 .story-single {
     @include center-box-margin(45%, 3.5rem);
-    @include background-color-opacity($white, .6);
+    @include background-color-opacity($white, .45);
     border-radius: 3px;
     transform: skew(-15deg);
     padding: 1.5rem 2rem;

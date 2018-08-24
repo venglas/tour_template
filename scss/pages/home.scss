@@ -35,9 +35,9 @@
         }
     }
     &--stories {
-        height: 100vh;
+        height: 80vh;
         padding-top: 5rem;
-        background-color: $light_gray;
+        position: relative;
     }
     &__header {
         text-transform: uppercase;

@@ -282,7 +282,7 @@ body {
 .story-single {
   width: 45%;
   margin: 3.5rem auto;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.45);
   border-radius: 3px;
   transform: skew(-15deg);
   padding: 1.5rem 2rem; }
@@ -347,6 +347,19 @@ body {
       font-size: .9rem;
       color: #777;
       padding-left: 1rem; }
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.3; }
+  .video-background__content {
+    max-width: 100%;
+    width: 100%;
+    object-fit: fill;
+    max-height: 100%; }
 
 .header--home {
   background-image: url(../img/city.jpg);
@@ -445,9 +458,9 @@ body {
     justify-content: center; }
 
 .article--stories {
-  height: 100vh;
+  height: 80vh;
   padding-top: 5rem;
-  background-color: #eaeaea; }
+  position: relative; }
 
 .article__header {
   text-transform: uppercase;
