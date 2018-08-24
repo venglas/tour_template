@@ -1,5 +1,6 @@
 .button {
-    &--read-more {
+    &--read-more,
+    &--see-all-stories {
         padding: .5rem;
         font-size: 1.3rem;
         color: $light_blue;
@@ -17,6 +18,10 @@
             box-shadow: 5px 3px 12px rgba(0, 0, 0, 0.35);
             transition: all ease-in-out 50ms;
         }
+    }
+    &--see-all-stories {
+        display: block;
+        @include center-box(fit-content)
     }
 }
 
@@ -61,5 +66,6 @@
     @include link-restart($gray);
     &:hover {
         color: darken($dark_gray, 10%);
+        @include background-color-opacity(#12a9eb, .1);
     }
 }
