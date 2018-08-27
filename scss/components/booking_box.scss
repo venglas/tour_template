@@ -6,4 +6,57 @@
     background-image: linear-gradient(-60deg, transparent 45%, rgba($white, .82) 30%), url(../img/lake_2.jpg);
     background-size: cover;
     background-position: top;
+    &__form {
+        width: 55%;
+        height: 100%;
+        padding: 3rem 0;
+    }
+}
+
+.form {
+    font-size: .7rem;
+    &__group:not(:last-child) {
+        margin-bottom: 1.5rem;
+    }
+    &__group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__input {
+        font-size: .9rem; // color: $gray;
+        font-weight: 700;
+        letter-spacing: 1px;
+        padding: 1.2rem 2rem;
+        box-shadow: 0 4px 28px rgba(#000, .7);
+        border-bottom: 3px solid transparent;
+        color: $dark_gray_2;
+        width: 85%;
+        display: block;
+        &:focus {
+            border-bottom: 3px solid rgba(lighten(blue, 25%), .7);
+        }
+        &:focus:invalid {
+            border-bottom: 3px solid $light_red;
+        }
+        &::-webkit-input-placeholder {
+            color: $gray;
+        }
+        &:placeholder-shown+.form__label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-2rem);
+        }
+    }
+    &__label {
+        text-align: left;
+        margin: .5rem 0;
+        display: block;
+        width: 100%;
+        padding-left: 5rem;
+        font-size: .9rem;
+        color: $gray;
+        font-weight: 600;
+        transition: all ease 400ms;
+    }
 }

@@ -65,6 +65,9 @@
                 cursor: context-menu;
             }
         }
+        &--booking {
+            margin-bottom: 3rem;
+        }
     }
     .section-wrapper {
         @include center-box(80%);
