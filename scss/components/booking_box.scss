@@ -1,0 +1,9 @@
+.booking-box {
+    @include center-box(65%);
+    height: 40rem;
+    border-radius: 3px;
+    box-shadow: 0 12px 3.5rem rgba(#000, .8);
+    background-image: linear-gradient(-60deg, transparent 45%, rgba($white, .82) 30%), url(../img/lake_2.jpg);
+    background-size: cover;
+    background-position: top;
+}

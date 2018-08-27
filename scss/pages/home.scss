@@ -39,6 +39,10 @@
         padding-top: 5rem;
         position: relative;
     }
+    &--booking {
+        padding: 14rem 0;
+        background-image: linear-gradient(to bottom right, rgb(66, 149, 244), rgb(44, 131, 232));
+    }
     &__header {
         text-transform: uppercase;
         font-size: 2.1rem;
