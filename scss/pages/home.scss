@@ -41,7 +41,9 @@
     }
     &--booking {
         padding: 14rem 0;
-        background-image: linear-gradient(to bottom right, rgb(66, 149, 244), rgb(44, 131, 232));
+        background-image: linear-gradient(to bottom right, rgba(0, 151, 39, 0.8), rgba(0, 181, 149, 0.8)), url(../img/leafs.jpg);
+        background-size: cover;
+        background-position: center;
     }
     &__header {
         text-transform: uppercase;

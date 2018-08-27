@@ -525,7 +525,9 @@ body {
 
 .article--booking {
   padding: 14rem 0;
-  background-image: linear-gradient(to bottom right, #4295f4, #2c83e8); }
+  background-image: linear-gradient(to bottom right, rgba(0, 151, 39, 0.8), rgba(0, 181, 149, 0.8)), url(../img/leafs.jpg);
+  background-size: cover;
+  background-position: center; }
 
 .article__header {
   text-transform: uppercase;
